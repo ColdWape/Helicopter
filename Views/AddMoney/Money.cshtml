@@ -1,0 +1,28 @@
+﻿@model Helicopter.Models.BalanceModel
+
+<div class="reg-form">
+    <div class="container">
+        <div class="reg">
+            <h3>Пополнение баланса (только картой)</h3>
+            <form asp-controller="AddMoney" asp-action="Money" asp-antiforgery="true">
+                <ul>
+                    <li class="text-info">Суmmа пополнения: </li>
+                    <li><input asp-for="Quantity" type="text" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Ноmер карты: </li>
+                    <li><input asp-for="CardNumber" type="text" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Иmя на карте:</li>
+                    <li><input asp-for="Name" type="text" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Три цифры на обратной стороне: </li>
+                    <li><input asp-for="CvvCode" type="password" /></li>
+                </ul>
+                <input type="submit" value="Пополнить баланс">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+﻿@model Helicopter.Models.RegistrationModel
+
+<div class="reg-form">
+    <div class="container">
+        <div class="reg">
+            <h3>Зарегистрируйся сейчас</h3>
+            <form asp-controller="Signin" asp-action="Registration" asp-antiforgery="true">
+                <ul>
+                    <li class="text-info">Иmя: </li>
+                    <li><input asp-for="Name" type="text" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Email: </li>
+                    <li><input asp-for="Email" type="text" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Ноmер телефона для связи:</li>
+                    <li><input asp-for="Mobile" type="text" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Пароль: </li>
+                    <li><input asp-for="Password" type="password" /></li>
+                </ul>
+                <ul>
+                    <li class="text-info">Повтор пароля:</li>
+                    <li><input asp-for="RePassword" type="password" /></li>
+                </ul>
+                <input type="submit" value="Зарегистрироваться">
+            </form>
+        </div>
+    </div>
+</div>

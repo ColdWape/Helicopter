@@ -1,0 +1,37 @@
+﻿<div class="reg-form">
+    <div class="container">
+        <div class="reg">
+            <h3>Окно оплаты</h3>
+            <form asp-controller="Order" asp-action="ShowOrder" asp-antiforgery="true">
+                <table style="width:100%; font-size: x-large;">
+                    <thead>
+                        <tr style="border-bottom: solid 1px;">
+                            <td>Название</td>
+                            <td style="text-align: right;">Цена</td>
+                            <td style="text-align: right;">Количество</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr style="border-bottom: solid 1px;">
+                            <td>@ViewBag.Item.Name</td>
+                            <td style="text-align: right;">@ViewBag.Item.Price</td>
+                            <td style="text-align: right;">@ViewBag.Quantity</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr style="border-bottom: solid 1px;">
+                            <td>Итого</td>
+                            <td style="text-align: right;"></td>
+                            <td style="text-align: right;">@ViewBag.Summ</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div style="width:100%; text-align:right;">
+                    <input style="display:none" name="money" value="@ViewBag.Summ" />
+                    <input type="submit" value="Оплатить">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
